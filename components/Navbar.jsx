@@ -4,18 +4,20 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from './ui/button'
+import { usePathname } from 'next/navigation';
 
-const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Service', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Page() {
+export default function Navbar() {
+  const pathname = usePathname();
+  const navigation = [
+    { name: 'Home', href: '/',   },
+    { name: 'Service', href: '/service',  },
+    { name: 'Contact', href: '/contact',  },
+  ]
   return (
     <Disclosure as="nav" className="glassmorphism ">
       {({ open }) => (
@@ -53,10 +55,10 @@ export default function Page() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          (item.href===pathname) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          'rounded-md px-3 py-2 text-sm font-medium cursor-pointer'
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.href===pathname ? 'page' : undefined}
                       >
                         {item.name}
                       </a>

@@ -3,7 +3,8 @@ import HeroPage from "@/components/sections/HeroPage";
 import Features from "@/components/sections/Features";
 import Product from "@/components/sections/Product";
 import Services from "@/components/sections/Services";
-import { Navbar } from "@/components";
+import Parllax from "@/components/sections/Parllax";
+import CTA from "@/components/sections/CTA";
 export default function Home() {
   return (
     <>
@@ -48,6 +49,8 @@ export default function Home() {
         <div className="w-full bg-white">
           <Product />
           <Services />
+          <Parllax />
+          <CTA />
         </div>
       </div>
     </>
