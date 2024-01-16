@@ -42,7 +42,7 @@ export default function CTA() {
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <Link
                 href="/contact"
-                className="rounded-md bg-white py-5 font-semibold text-gray-900 shadow-sm  focus-visible:outline focus-visible:outline-2 hover:scale-105 hover:bg-slate-200 px-10 focus-visible:outline-offset-2 focus-visible:outline-white text-xl"
+                className="rounded-md bg-white py-5 font-semibold text-gray-900 shadow-sm  focus-visible:outline focus-visible:outline-2 hover:scale-105 hover:bg-slate-200 px-10 focus-visible:outline-offset-2 focus-visible:outline-white text-xl relative z-20"
               >
                 Get started
               </Link>

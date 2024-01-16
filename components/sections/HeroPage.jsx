@@ -1,15 +1,13 @@
 "use client";
 import Image from "next/image";
-
+import { Rubik } from "next/font/google";
 import React from "react";
 import { Button } from "../ui/button";
-import { Rubik } from "next/font/google";
 import { motion } from "framer-motion";
 
 const font = Rubik({ subsets: ["latin"] });
 import { slideIn } from "./../../lib/motion";
 import Link from "next/link";
-
 const HeroPage = () => {
   return (
     <div className="container px-6 py-16 mx-auto relative my-10">
@@ -29,8 +27,8 @@ const HeroPage = () => {
               unparalleled experiences. Unleash the extraordinary, and let your
               imagination take flight.
             </p>
-            <Link href="/">
-              <Button className="px-12 hover:bg-slate-100 hover:scale-105 py-8 text-slate-900 font-bold bg-slate-200 my-10 shadow-md text-2xl">
+            <Link href="/contact" className="z-50 cursor-pointer relative">
+              <Button className="px-12 hover:bg-slate-100 hover:scale-105 py-8 text-slate-900 cursor-pointer font-bold z-50 bg-slate-200 my-10 shadow-md text-2xl">
                 Rent Now
               </Button>
             </Link>
@@ -51,7 +49,7 @@ const HeroPage = () => {
             }}
           >
             <Image
-              className="w-full h-full lg:max-w-3xl"
+              className="w-full h-full lg:max-w-3xl noselect"
               src="/Headset_3-meta-gear-PhotoRoom.png-PhotoRoom.webp"
               alt=""
               width={500}

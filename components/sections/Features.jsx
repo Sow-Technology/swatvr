@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
+import Link from "next/link";
 const BounceCard = ({ className, children }) => {
   return (
     <motion.div
@@ -27,13 +28,15 @@ const Features = () => {
             Unleash Your Reality with
             <span className="text-slate-200"> Our VR Rentals</span>
           </h2>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="whitespace-nowrap rounded-lg  py-4 font-medium shadow-xl transition-colors hover:bg-slate-200 text-xl px-7 text-slate-900  bg-slate-200"
-          >
-            Rent Now
-          </motion.div>
+          <Link href="/contact">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="whitespace-nowrap rounded-lg  py-4 font-medium shadow-xl transition-colors hover:bg-slate-200 text-xl px-7 text-slate-900  bg-slate-200"
+            >
+              Rent Now
+            </motion.div>
+          </Link>
         </div>
         <div className="mb-4 grid grid-cols-12 gap-4 text-slate-900">
           <BounceCard className="col-span-12 md:col-span-4">
