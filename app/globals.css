@@ -116,7 +116,7 @@
   left: 30%;
   top: 10%;
 
-  background: rgba(45, 72, 152, 0.75);
+  background: rgba(45, 72, 152, 0.534);
   filter: blur(200px);
   transform: rotate(-53.13deg);
 }
@@ -153,4 +153,26 @@
 .noselect{
   user-select: none;
   -webkit-user-drag: none;
+}
+*::-webkit-scrollbar{
+  background-color: #304257;
+}
+*::-webkit-scrollbar-thumb{
+  /* background-color:     hsl(295deg 76% 51%) ; */
+  background-color:     rgb(234, 179, 8 ) ;
+  
+  border-radius: 20px;
+
+}
+*::-webkit-scrollbar-thumb:hover{
+  background-color:     rgb(255, 204, 49) ;
+
+}
+  *::-webkit-scrollbar-track{
+  background-color: #304257;
+  border-radius: 20px;
+
+}
+html,body{
+  overflow-x:hidden;
 }

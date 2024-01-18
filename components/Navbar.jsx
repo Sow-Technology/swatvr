@@ -37,16 +37,18 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
-                <div className="flex flex-shrink-0 items-center">
-                  <Image
-                    className="h-20 w-auto"
-                    height={80}
-                    width={80}
-                    src="/logo.webp"
-                    alt="SWAT VR | Best VR rentals in India"
-                  />
-                </div>
+              <div className="flex flex-1 items-center justify-between ml-10 sm:items-stretch sm:justify-between">
+                <Link href="/">
+                  <div className="flex flex-shrink-0 items-center cursor-pointer ">
+                    <Image
+                      className="h-20 w-auto noselect"
+                      height={80}
+                      width={80}
+                      src="/logo.webp"
+                      alt="SWAT VR | Best VR rentals in India"
+                    />
+                  </div>
+                </Link>
                 <div className="hidden sm:ml-6 sm:flex items-center">
                   <div className="flex space-x-4 items-center justify-center relative z-20">
                     {navigation.map((item) => (
@@ -56,8 +58,8 @@ export default function Navbar() {
                         className={classNames(
                           item.href === pathname
                             ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium cursor-pointer relative z-20"
+                            : "text-gray-300 hover:bg-gray-900 hover:text-white",
+                          "rounded-md hover:scale-105 transition-transform px-3 py-2 text-sm font-medium cursor-pointer relative z-20"
                         )}
                         aria-current={
                           item.href === pathname ? "page" : undefined
@@ -70,7 +72,9 @@ export default function Navbar() {
                 </div>
                 <div className="flex items-center">
                   <Link href="https://wa.me/message/67M7J5TGVYC7L1">
-                    <Button className="bg-slate-900">Whatsapp</Button>
+                    <Button className="bg-gray-900 hover:scale-105 transition-transform">
+                      Whatsapp
+                    </Button>
                   </Link>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import Link from "next/link";
 const BounceCard = ({ className, children }) => {
   return (
@@ -41,7 +41,7 @@ const Features = () => {
         <div className="mb-4 grid grid-cols-12 gap-4 text-slate-900">
           <BounceCard className="col-span-12 md:col-span-4">
             <CardTitle>Immersive Experiences</CardTitle>
-            <div className="absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl bg-gradient-to-br from-violet-400 to-indigo-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
+            <div className="absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl bg-gradient-to-br from-violet-400 to-indigo-400 p-4 transition-transform duration-200 group-hover:translate-y-4 group-hover:rotate-[2deg]">
               <span className="block text-center font-semibold text-indigo-50">
                 Immerse yourself in a diverse range of captivating VR content,
                 from heart-pounding games to educational adventures, providing
@@ -51,7 +51,7 @@ const Features = () => {
           </BounceCard>
           <BounceCard className="col-span-12 md:col-span-8">
             <CardTitle>Cutting-Edge Headsets:</CardTitle>
-            <div className="absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
+            <div className="absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-200 group-hover:translate-y-4 group-hover:rotate-[2deg]">
               <span className="block text-center font-semibold text-orange-50">
                 Access the pinnacle of VR technology with our cutting-edge
                 headset rentals, delivering stunning visuals and seamless
@@ -63,7 +63,7 @@ const Features = () => {
         <div className="grid grid-cols-12 gap-4 text-slate-900">
           <BounceCard className="col-span-12 md:col-span-8">
             <CardTitle>Dedicated Customer Support</CardTitle>
-            <div className="absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl bg-gradient-to-br from-green-400 to-emerald-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
+            <div className="absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl bg-gradient-to-br from-green-400 to-emerald-400 p-4 transition-transform duration-200 group-hover:translate-y-4 group-hover:rotate-[2deg]">
               <span className="block text-center font-semibold text-emerald-50">
                 Experience worry-free rentals with our dedicated customer
                 support team. Have questions or need assistance? Our experts are
@@ -73,7 +73,7 @@ const Features = () => {
           </BounceCard>
           <BounceCard className="col-span-12 md:col-span-4">
             <CardTitle>Flexible Packages</CardTitle>
-            <div className="absolute bottom-0 left-4 right-4 top-24 translate-y-8 rounded-t-2xl bg-gradient-to-br from-pink-400 to-red-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
+            <div className="absolute bottom-0 left-4 right-4 top-24 translate-y-8 rounded-t-2xl bg-gradient-to-br from-pink-400 to-red-400 p-4 transition-transform duration-200 group-hover:translate-y-4 group-hover:rotate-[2deg]">
               <span className="block text-center font-semibold text-red-50">
                 Choose from flexible rental packages tailored to your needs,
                 whether it`s a short gaming session or an extended exploration.
@@ -84,13 +84,13 @@ const Features = () => {
         </div>
       </section>
       <svg
-        className="absolute -bottom-72 -z-[1]"
+        className="absolute -bottom-48 lg:-bottom-72 -z-[1]"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
       >
         <path
           fill="#1a232e"
-          fill-opacity="1"
+          fillOpacity="1"
           d="M0,224L26.7,192C53.3,160,107,96,160,90.7C213.3,85,267,139,320,154.7C373.3,171,427,149,480,144C533.3,139,587,149,640,160C693.3,171,747,181,800,208C853.3,235,907,277,960,256C1013.3,235,1067,149,1120,133.3C1173.3,117,1227,171,1280,197.3C1333.3,224,1387,224,1413,224L1440,224L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"
         ></path>
       </svg>

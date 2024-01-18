@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import Link from "next/link";
 
 const Services = () => {
   return (
-    <div className="max-w-screen-xl mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <div className="max-w-screen-xl mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 relative z-10">
       <div className="mb-10 grid max-w-2xl grid-cols-1 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
@@ -15,17 +15,17 @@ const Services = () => {
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 Virtual Reality Rental Package Options
               </h1>
-              <p className="mt-6 text-xl leading-8 text-gray-700">
-                Take users on a journey through real-life applications of
-                virtual reality. Showcase how VR is being used across various
-                industries and experiences:
-              </p>
             </div>
           </div>
+          <p className="mt-6 text-xl leading-8 text-gray-700">
+            Take users on a journey through real-life applications of virtual
+            reality. Showcase how VR is being used across various industries and
+            experiences:
+          </p>
         </div>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8">
-        <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
+        <div className="divide-y glassmorphism divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
           <div className="p-6 sm:px-8">
             <h2 className="text-lg font-medium text-gray-900">
               Starter
@@ -127,7 +127,7 @@ const Services = () => {
             </ul>
           </div>
         </div>
-        <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
+        <div className="divide-y divide-gray-200 glassmorphism rounded-2xl border border-gray-200 shadow-sm">
           <div className="p-6 sm:px-8">
             <h2 className="text-lg font-medium text-gray-900">
               Pro
@@ -213,7 +213,7 @@ const Services = () => {
             </ul>
           </div>
         </div>
-        <div className="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
+        <div className="divide-y glassmorphism divide-gray-200 rounded-2xl border border-gray-200 shadow-sm">
           <div className="p-6 sm:px-8">
             <h2 className="text-lg font-medium text-gray-900">
               Enterprise

@@ -2,17 +2,17 @@
 import Image from "next/image";
 import { Rubik } from "next/font/google";
 import React from "react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { motion } from "framer-motion";
 
 const font = Rubik({ subsets: ["latin"] });
-import { slideIn } from "./../../lib/motion";
+import { slideIn } from "../../../lib/motion";
 import Link from "next/link";
 const HeroPage = () => {
   return (
-    <div className="container px-6 py-16 mx-auto relative my-10">
+    <div className="container px-6 py-28 mx-auto relative my-10">
       <div className="absolute hero-gradient top-20 left-10 w-full h-[300px]" />
-      <div className="items-center lg:flex">
+      <div className="items-center lg:flex gap-10">
         <div className="w-full lg:w-1/2">
           <div className="lg:max-w-3xl text-center">
             <h1
@@ -39,25 +39,40 @@ const HeroPage = () => {
             initial={{ x: "100%", opacity: 0, scale: 0.8 }}
             animate={{ x: 0, opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="w-full cursor-pointer"
-            drag
-            dragConstraints={{
-              top: -50,
-              left: -50,
-              right: 50,
-              bottom: 50,
-            }}
+            className="w-full cursor-pointer object-cover relative"
           >
             <Image
-              className="w-full h-full lg:max-w-3xl noselect"
-              src="/Headset_3-meta-gear-PhotoRoom.png-PhotoRoom.webp"
+              className="w-9/12 h-9/12 lg:max-w-3xl z-10 relative noselect object-cover rounded-full aspect-square mx-auto "
+              src="/herovr.webp"
               alt=""
               width={500}
               height={500}
             />
+            <div className="bg-yellow-500 w-9/12 h-9/12 top-10 absolute inset-0 rounded-full left-32 lg:left-28" />
           </motion.div>
         </div>
       </div>
+      <Image
+        src="/vr-camera_8170956.png"
+        alt="Best VR Rentals in india"
+        className="absolute top-12 right-12 lg:block hidden"
+        width={80}
+        height={80}
+      />
+      <Image
+        src="/vricon2.png"
+        alt="Best VR Rentals in india"
+        className="absolute bottom-28 right-1/2 lg:block hidden"
+        width={80}
+        height={80}
+      />
+      <Image
+        src="/vr-3.png"
+        alt="Best VR Rentals in india"
+        className="absolute top-[40%] -left-20 lg:block hidden"
+        width={80}
+        height={80}
+      />
     </div>
   );
 };

@@ -7,7 +7,7 @@ export default function CTA() {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-        <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+        <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 h-[1000px] lg:h-[600px]">
           <svg
             viewBox="0 0 1024 1024"
             className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -48,14 +48,15 @@ export default function CTA() {
               </Link>
             </div>
           </div>
-          <div className="relative mt-16 h-80 lg:mt-8">
+          <div className="my-auto lg:h-full flex items-center relative justify-center p-5 lg:mt-8">
             <Image
-              className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md -mt-64 -ml-20 lg:-mt-32 "
-              src="/oculus.png"
+              className=" w-full max-w-none rounded-md  h-80 "
+              src="/CTA.jpg"
               alt="VR rentals by SWAT VR"
               width={500}
               height={500}
             />
+            <div className="h-[320px] w-[93%] left-8 lg:top-[10rem] top-[2rem] bg-yellow-500 rounded-md z-[-1] absolute " />
           </div>
         </div>
       </div>

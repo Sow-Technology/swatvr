@@ -1,14 +1,14 @@
 "use client";
-import HeroPage from "@/components/sections/HeroPage";
-import Features from "@/components/sections/Features";
-import Product from "@/components/sections/Product";
-import Services from "@/components/sections/Services";
-import Parllax from "@/components/sections/Parllax";
-import CTA from "@/components/sections/CTA";
+import HeroPage from "@/components/sections/Home/HeroPage";
+import Features from "@/components/sections/Home/Features";
+import Product from "@/components/sections/Home/Product";
+import Services from "@/components/sections/Home/Services";
+import Parllax from "@/components/sections/Home/Parllax";
+import CTA from "@/components/sections/Home/CTA";
+import Shuffle from "@/components/sections/Home/Shuffle";
 export default function Home() {
   return (
     <>
-      {/* <Navbar /> */}
       <div className="relative isolate overflow-hidden   lg:overflow-visible ">
         <div className="absolute inset-0 -z-10 overflow-hidden opacity-30">
           <svg
@@ -48,6 +48,10 @@ export default function Home() {
         </div>
         <div className="w-full bg-white">
           <Product />
+          <div className="relative">
+            <Shuffle />
+            <div className="gradient-04 z-0" />
+          </div>
           <Services />
           <Parllax />
           <CTA />

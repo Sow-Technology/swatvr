@@ -17,7 +17,7 @@ const Parllax = () => {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg flex">
               <div>
-                <p className="text-base font-semibold leading-7 text-indigo-600">
+                <p className="text-base font-semibold leading-7 text-indigo-600 uppercase">
                   Your Experience
                 </p>
                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -34,6 +34,7 @@ const Parllax = () => {
           </p>
         </div>
       </div>
+
       <video
         autoPlay
         loop
