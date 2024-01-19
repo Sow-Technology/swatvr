@@ -21,16 +21,16 @@ const Parllax = () => {
                   Your Experience
                 </p>
                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  VR Odyssey: Dive into the Extraordinary
+                  What You Can Expect From Us
                 </h1>
               </div>
             </div>
           </div>
           <p className="mt-6 text-xl leading-8 text-gray-700 text-justify">
-            Embark on a mesmerizing journey with our VR rental services. Immerse
-            yourself in captivating videos that breathe life into the
-            extraordinary adventures offered by our VR rentals. Beyond
-            descriptions, witness the magic firsthand.
+            At SWATVR , we bring joy and excitement to every event we touch.
+            With us by your side, you can rest assured that your guests will be
+            delighted, your event planning will be a breeze, and that your event
+            will be unforgettable.
           </p>
         </div>
       </div>

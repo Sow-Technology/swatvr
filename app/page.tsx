@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <HeroPage />
         <div className="relative">
-          <Features />
+          {/* <Features /> */}
           <div className="gradient-03 z-0" />
         </div>
         <div className="w-full bg-white">
