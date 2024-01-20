@@ -1,14 +1,8 @@
-import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from "@heroicons/react/20/solid";
-import Image from "next/image";
-
+import React from "react";
 export default function Product() {
   return (
-    <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+    <div className="relative isolate overflow-hidden  px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+      <div className="absolute inset-0 -z-10 overflow-hidden opacity-20">
         <svg
           className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
           aria-hidden="true"
@@ -39,17 +33,17 @@ export default function Product() {
           />
         </svg>
       </div>
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10 relative">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-indigo-600">
+              <p className="text-base font-semibold leading-7 text-yellow-500">
                 VR Showcase
               </p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">
                 Explore Real-Life Applications of Virtual Reality
               </h1>
-              <p className="mt-6 text-xl leading-8 text-gray-700">
+              <p className="mt-6 text-xl leading-8 text-gray-50/80">
                 Take users on a journey through real-life applications of
                 virtual reality. Showcase how VR is being used across various
                 industries and experiences:
@@ -70,9 +64,10 @@ export default function Product() {
             Your browser does not support the video tag.
           </video>
         </div>
+
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
-            <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
+            <div className="max-w-xl text-base leading-7 text-gray-50/80 lg:max-w-lg">
               <p>
                 Embark on a captivating journey through the versatile realms of
                 virtual reality in our VR Rental Service. Immerse yourself in
@@ -87,11 +82,11 @@ export default function Product() {
                 exploration as we unveil the limitless possibilities of virtual
                 reality in an immersive showcase like never before.
               </p>
-              <ul role="list" className="mt-8 space-y-8 text-gray-600">
+              <ul role="list" className="mt-8 space-y-8 text-gray-50/80">
                 <li className="flex gap-x-3">
                   💼
                   <span>
-                    <strong className="font-semibold text-gray-900">
+                    <strong className="font-semibold text-yellow-500">
                       Business and Training Solutions.
                     </strong>{" "}
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -102,7 +97,7 @@ export default function Product() {
                 <li className="flex gap-x-3">
                   🏥{" "}
                   <span>
-                    <strong className="font-semibold text-gray-900">
+                    <strong className="font-semibold text-yellow-500">
                       Healthcare and Therapy.
                     </strong>{" "}
                     Explore the use of VR in healthcare, showcasing how it aids
@@ -112,7 +107,7 @@ export default function Product() {
                 <li className="flex gap-x-3">
                   🌍{" "}
                   <span>
-                    <strong className="font-semibold text-gray-900">
+                    <strong className="font-semibold text-yellow-500">
                       Virtual Tourism.
                     </strong>{" "}
                     Transport users to different parts of the world through VR.
@@ -123,7 +118,7 @@ export default function Product() {
                 <li className="flex gap-x-3">
                   🎨{" "}
                   <span>
-                    <strong className="font-semibold text-gray-900">
+                    <strong className="font-semibold text-yellow-500">
                       Art and Creativity.
                     </strong>{" "}
                     Illustrate how VR is transforming social interactions with
@@ -135,7 +130,7 @@ export default function Product() {
                 <li className="flex gap-x-3">
                   🏛️{" "}
                   <span>
-                    <strong className="font-semibold text-gray-900">
+                    <strong className="font-semibold text-yellow-500">
                       Architectural Visualization.
                     </strong>{" "}
                     Explore how VR is revolutionizing architectural design and
@@ -158,7 +153,7 @@ export default function Product() {
                 power of VR, and let us pave the way for a reality that knows no
                 bounds.
               </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
+              <h2 className="mt-16 text-2xl font-bold tracking-tight text-yellow-500">
                 Get Started Today.
               </h2>
               <p className="mt-6">

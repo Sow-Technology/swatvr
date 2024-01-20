@@ -38,10 +38,10 @@ const ShuffleHero = () => {
       <ShuffleGrid />
       <div className="flex items-start flex-col h-full">
         <div className="lg:max-w-lg">
-          <p className="text-base font-semibold leading-7 text-indigo-600">
+          <p className="text-base font-semibold leading-7 text-yellow-500">
             VR Spectaculars
           </p>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">
             Explore Unforgettable VR Experiences with Our Rental Services
           </h1>
         </div>

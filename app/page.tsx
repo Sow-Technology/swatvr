@@ -6,10 +6,19 @@ import Services from "@/components/sections/Home/Services";
 import Parllax from "@/components/sections/Home/Parllax";
 import CTA from "@/components/sections/Home/CTA";
 import Shuffle from "@/components/sections/Home/Shuffle";
+import { useEffect, useState } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Loading from "@/components/Loading";
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 3500);
+  });
+  if (isLoading) return <Loading />;
   return (
     <>
-      <div className="relative isolate overflow-hidden   lg:overflow-visible ">
+      <div className="relative overflow-hidden   lg:overflow-visible ">
         <div className="absolute inset-0 -z-10 overflow-hidden opacity-30">
           <svg
             className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
@@ -41,12 +50,13 @@ export default function Home() {
             />
           </svg>
         </div>
+        <Navbar />
         <HeroPage />
-        <div className="relative">
-          {/* <Features /> */}
+        {/* <div className="relative">
+          <Features />
           <div className="gradient-03 z-0" />
-        </div>
-        <div className="w-full bg-white">
+        </div> */}
+        <div className="w-full ">
           <Product />
           <div className="relative">
             <Shuffle />
@@ -55,6 +65,7 @@ export default function Home() {
           <Services />
           <Parllax />
           <CTA />
+          <Footer />
         </div>
       </div>
     </>

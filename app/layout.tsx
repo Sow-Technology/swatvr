@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import ScrollProvider from "@/components/providers/ScrollProvider";
 import { Toaster } from "react-hot-toast";
 import NextTopLoader from "nextjs-toploader";
 
@@ -18,8 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="!scroll-smooth">
       <body
+        data-scroll-section
         className={`${inter.className} bg-[#1A232E]`}
         suppressHydrationWarning
       >
@@ -37,9 +37,7 @@ export default function RootLayout({
           zIndex={1600}
         />
         <Toaster />
-        <Navbar />
-        {children}
-        <Footer />
+        <ScrollProvider>{children}</ScrollProvider>
         <Toaster />
       </body>
     </html>
