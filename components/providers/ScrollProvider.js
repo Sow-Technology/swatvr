@@ -7,7 +7,9 @@ const ScrollProvider = ({ children }) => {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
+        lerp: 0.3,
         // ... all available Locomotive Scroll instance options
+        multiplier: 2.1,
       }}
       watch={
         [

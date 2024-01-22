@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Cousine } from "next/font/google";
 import "./globals.css";
 import ScrollProvider from "@/components/providers/ScrollProvider";
 import { Toaster } from "react-hot-toast";
 import NextTopLoader from "nextjs-toploader";
-
+import Gradients from "@/components/Gradients";
 const inter = Inter({ subsets: ["latin"] });
+const cousine = Cousine({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-cousine",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "SWAT VR | Best VR rentals in India",
@@ -17,10 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="!scroll-smooth">
+    <html lang="en" suppressHydrationWarning className="!scroll-smooth ">
       <body
         data-scroll-section
-        className={`${inter.className} bg-[#1A232E]`}
+        className={`${inter.className} bg-[#1A232E]  ${cousine.variable}`}
         suppressHydrationWarning
       >
         <NextTopLoader
@@ -37,7 +44,8 @@ export default function RootLayout({
           zIndex={1600}
         />
         <Toaster />
-        <ScrollProvider>{children}</ScrollProvider>
+        {/* <ScrollProvider>{children}</ScrollProvider> */}
+        {children}
         <Toaster />
       </body>
     </html>
