@@ -23,61 +23,58 @@ const pathVariants = {
 };
 const VR = (props) => {
   const [path, setPath] = React.useState([]);
-  const coordinates = [
-    "M72.653",
-    "30.419H17.347a7.904",
-    "7.904",
-    "0",
-    "0",
-    "0-7.904",
-    "7.904v22.641a7.904",
-    "7.904",
-    "0",
-    "0",
-    " 0",
-    "7.904",
-    "7.904h14.459c2.839",
-    "0",
-    "5.503-1.272",
-    "7.379-3.402",
-    "1.42-1.612",
-    "3.498-2.63",
-    "5.815-2.63s4.396",
-    "1.017",
-    " 5.815",
-    "2.63c1.876",
-    "2.131",
-    "4.54",
-    "3.402",
-    "7.379",
-    "3.402h14.459a7.904",
-    "7.904",
-    "0",
-    "0",
-    "0",
-    "7.904-7.904V38.323a7.904",
-    "7.904",
-    "0",
-    "0a",
-    "0-7.904-7.904z",
-  ];
+
   React.useEffect(() => {
-    // Get the index of the next coordinate to be added
+    const coordinates = [
+      "M72.653",
+      "30.419H17.347a7.904",
+      "7.904",
+      "0",
+      "0",
+      "0-7.904",
+      "7.904v22.641a7.904",
+      "7.904",
+      "0",
+      "0",
+      " 0",
+      "7.904",
+      "7.904h14.459c2.839",
+      "0",
+      "5.503-1.272",
+      "7.379-3.402",
+      "1.42-1.612",
+      "3.498-2.63",
+      "5.815-2.63s4.396",
+      "1.017",
+      " 5.815",
+      "2.63c1.876",
+      "2.131",
+      "4.54",
+      "3.402",
+      "7.379",
+      "3.402h14.459a7.904",
+      "7.904",
+      "0",
+      "0",
+      "0",
+      "7.904-7.904V38.323a7.904",
+      "7.904",
+      "0",
+      "0a",
+      "0-7.904-7.904z",
+    ];
     const index = path.length;
 
-    // Check if there are more coordinates to add
     if (index < coordinates.length) {
-      // Use setTimeout to schedule the update after one second
       const timer = setTimeout(() => {
         // Use the functional update form of setState
         // Spread the previous path and add the next coordinate
         setPath((prevPath) => [...prevPath, coordinates[index]]);
       }, 20);
 
-      // Return a cleanup function to clear the timeout
       return () => clearTimeout(timer);
     }
-  }, [path, coordinates]); // Add path and coordinates as dependencies
+  }, [path]); // Add path and coordinates as dependencies
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"

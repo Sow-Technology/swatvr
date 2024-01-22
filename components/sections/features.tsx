@@ -1,5 +1,6 @@
 import { stylesWithCssVar } from "@/utils/motion";
 import { useScroll, useTransform, motion } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 
 export const Features = () => {
@@ -58,18 +59,30 @@ export const Features = () => {
       <div className="sticky top-[16.7vh] h-[66.8vh] px-16 text-2xl leading-[1] text-white [&_p]:w-[45rem] [&_p]:max-w-[90%]">
         <motion.div style={{ x, scale }} className="relative h-full">
           <motion.figure style={{ opacity }} className="h-full">
-            <img src="/main-screen.svg" className="h-full w-auto" />
+            <Image
+              src="/main-screen.svg"
+              className="h-full w-auto"
+              width={1000}
+              height={1000}
+              alt=""
+            />
           </motion.figure>
           <motion.figure style={{ opacity: text2Opacity }}>
-            <img
+            <Image
               src="/command-palette.svg"
               className="absolute inset-0 h-full w-auto"
+              alt=""
+              width={1000}
+              height={1000}
             />
           </motion.figure>
           <motion.figure style={{ opacity: text3Opacity }}>
-            <img
+            <Image
               src="/devtools.svg"
               className="absolute inset-0 h-full w-auto"
+              alt=""
+              height={1000}
+              width={1000}
             />
           </motion.figure>
         </motion.div>
@@ -82,7 +95,7 @@ export const Features = () => {
         >
           <span className="text-primary">Preconfigured environments</span>
           <br />
-          We detect your environment so you don't need to fiddle with
+          We detect your environment so you don&#39;t need to fiddle with
           configuration files.
         </motion.p>
         <motion.p
@@ -105,8 +118,8 @@ export const Features = () => {
         >
           <span className="text-primary">Devtools</span>
           <br />
-          We've bundled useful tools to help you get your work done faster and
-          more efficiently.
+          We&#39;ve bundled useful tools to help you get your work done faster
+          and more efficiently.
         </motion.p>
       </div>
     </section>

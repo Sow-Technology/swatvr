@@ -1,6 +1,7 @@
 import { BranchIcon } from "@/components/icons/branch";
 import { stylesWithCssVar } from "@/utils/motion";
 import { useScroll, useTransform, motion } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 
 const animationOrder = {
@@ -162,11 +163,18 @@ export const SamePage = () => {
               "--scale": scale,
             })}
           >
-            <img src="/main-screen.svg" className="h-auto w-full" />
+            <Image
+              src="/main-screen.svg"
+              className="h-auto w-full"
+              alt=""
+              height={1000}
+              width={1000}
+            />
             <motion.img
               style={{ opacity: avatarOpacity }}
               className="absolute left-[13%] top-1/2 h-[1.5vw] w-[1.5vw] translate-y-1/2 rounded-full border border-[#c82] object-cover will-change-transform"
               src="https://unsplash.com/photos/sibVwORYqs0/download?force=true&w=128&h=128"
+              alt=""
             />
             <motion.span
               className="mt-3 block text-2xl text-white"
@@ -184,19 +192,31 @@ export const SamePage = () => {
               "--scale": loadingScreenscale,
             })}
           >
-            <img src="/loading-screen.svg" className="h-auto w-full" />
+            <Image
+              src="/loading-screen.svg"
+              className="h-auto w-full"
+              alt=""
+              width={1000}
+              height={1000}
+            />
             <motion.div
               style={{ opacity: newBranchOpacity }}
               className="absolute inset-0"
             >
-              <img src="/main-screen.svg" className="h-auto w-full" />
+              <Image
+                src="/main-screen.svg"
+                className="h-auto w-full"
+                alt=""
+                height={1000}
+                width={1000}
+              />
             </motion.div>
             <motion.span
               className="mt-3 block text-2xl text-white"
               style={{ opacity: newBranchOpacity }}
             >
               <BranchIcon className="mr-3 inline-block h-12 w-12" /> Frontend
-              FYI's branch
+              FYI&#39;s branch
             </motion.span>
           </motion.div>
 
@@ -232,7 +252,7 @@ export const SamePage = () => {
           })}
           className="translate-y-centered-offset top-1/2 right-[20px] w-[300px] pr-16 text-xl leading-tight text-white"
         >
-          Sometimes it's not about code.
+          Sometimes it&#39;s not about code.
           <br />
           <span className="text-primary">
             Get everybody on the same page. Literally.

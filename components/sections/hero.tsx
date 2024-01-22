@@ -1,6 +1,5 @@
 "use client";
-import { textVariant } from "@/lib/motion";
-import { staggerContainer } from "@/lib/motion";
+import { textVariant, staggerContainer } from "@/lib/motion";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Marquee from "./Home/Marquee";
@@ -46,7 +45,6 @@ export const Hero: React.FC = () => {
           <span className="font-medium">SWAT</span> VR
         </p>
         <motion.div
-          variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
